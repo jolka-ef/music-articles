@@ -1,0 +1,33 @@
+.Help {
+  &-answer {
+    margin: 0 0 2em 1em;
+  }
+
+  &-item {
+    margin-bottom: 1em;
+  }
+
+  &-question {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  &-questions {
+    background: $palette-woodsmoke;
+    border-top:$gutter solid $palette-white;
+    margin-bottom: $element-distance;
+    padding: $inner-margin;
+  }
+
+  &-topic {
+    margin: .75em 0;
+    text-shadow: $palette-black 0.1em 0.1em 0.2em;
+    text-transform: uppercase;
+  }
+}
+
+@include set-query(medium) {
+  .Help {
+    width: $width-narrow;
+  }
+}

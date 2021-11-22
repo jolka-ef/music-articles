@@ -1,0 +1,49 @@
+.TourTable {
+  background: $palette-black;
+  display: none;
+
+  &--selected {
+    display: table;
+  }
+
+  &-body {
+    background: $palette-woodsmoke;
+  }
+
+  &-col {
+    & + .TourTable-col {
+      border-left: $palette-black solid $gutter;
+    }
+  }
+
+  &-field {
+    display: block;
+    &:first-of-type {
+      font-weight: 600;
+    }
+  }
+
+  &-row {
+    border-top: $palette-black solid 10px;
+    display: block;
+    padding: .5em;
+  }
+}
+
+@include set-query(small) {
+  .TourTable {
+    &-field {
+      display: table-cell;
+      padding: .5rem;
+      &:first-of-type {
+        font-weight: normal;
+      }
+    }
+
+    &-row {
+      border-width: $gutter;
+      display: table-row;
+      padding: 0;
+    }
+  }
+}

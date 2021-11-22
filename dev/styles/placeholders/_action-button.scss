@@ -1,0 +1,15 @@
+%action-button {
+  cursor: pointer;
+  display: block;
+  font-size: .9em;
+  letter-spacing: .025em;
+  padding: .5em .625rem;
+  text-transform: uppercase;
+  transition: background .2s;
+}
+
+%action-button--hover {
+  background: $palette-white;
+  color:$palette-black;
+}
+

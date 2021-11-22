@@ -1,0 +1,58 @@
+.SiteNav {
+  display: flex;
+  flex-flow: column;
+
+  &-item {
+    box-shadow: $navigation-underline-mobile ;
+    padding: .5em 0;
+  }
+
+  &-link {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &-firstPart {
+    color:$palette-grayish;
+  }
+
+  &-secondPart{
+    letter-spacing: .025em;
+  }
+}
+
+
+@include set-query(medium) {
+  .SiteNav {
+    flex-flow: row;
+
+    &-firstPart {
+      color: $palette-white;
+      letter-spacing: normal;
+    }
+
+    &-item {
+      box-shadow: none;
+      padding: 0;
+
+      & + .SiteNav-item {
+        margin-left: 2em;
+      }
+
+    }
+
+    &-link {
+      display: flex;
+      flex-flow: column;
+
+      &:hover, &:focus {
+        box-shadow: $navigation-underline;
+      }
+    }
+
+    &-secondPart {
+      font-size: 1.5em;
+    }
+  }
+}

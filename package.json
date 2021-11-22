@@ -1,0 +1,45 @@
+{
+  "name": "music-articles",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint --fix tasks/**/*.js templates/_*.html dev/scripts/**/*.js",
+    "deploy": "NODE_ENV=production gulp build",
+    "build": "gulp build",
+    "start": "WATCH=1 gulp default"
+  },
+  "browserslist": [
+    "last 2 version"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "dom-utils": "^0.9.0",
+    "eslint": "^6.3.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-html": "^6.0.0",
+    "fs-extra": "^8.1.0",
+    "glob-fs": "^0.1.7",
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1",
+    "html-minifier": "^4.0.0",
+    "node-sass": "^4.12.0",
+    "nunjucks": "^3.2.0",
+    "require-dir": "^1.2.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.39.3",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.2",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "dependencies": {
+    "core-js": "^3.2.1"
+  }
+}
