@@ -1,0 +1,13 @@
+<ul class="{{version}}-actions">
+  {% for button in buttons %}
+  <li class="{{version}}-action">
+    {% if (button.type == 'link') %}
+      <a class="{{version}}-actionLink" href="{{baseUrl}}buy.html">{{button.name}}</a>
+    {% else %}
+      <button class="{{version}}-actionButton js-overlayShow" data-role="{{button.role}}">
+        {{button.name}}
+      </button>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

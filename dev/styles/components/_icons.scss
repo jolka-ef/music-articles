@@ -1,0 +1,26 @@
+.Icon {
+  display: inherit;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+
+  &--film {
+    height: 100%;
+    width: 100%;
+  }
+
+  &--info {
+    align-self: center;
+  }
+
+  &--logo {
+    height: 1em;
+    width: 2.4em;
+  }
+
+  &--menu {
+    height: 1em;
+    width: .5em;
+  }
+}
+

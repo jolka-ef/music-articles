@@ -1,0 +1,36 @@
+.Info {
+  background: $palette-black;
+  border-top: $box-decoration;
+  margin-bottom: $element-distance;
+
+  &-content {
+    flex:1 0 0%;
+    padding: $inner-margin;
+  }
+
+  &-icon {
+    background: $palette-woodsmoke;
+    display: flex;
+    font-size: 4em;
+    justify-content: center;
+    padding: .25em;
+  }
+
+  &--img {
+    display: flex;
+  }
+}
+
+
+@include set-query(very-small) {
+  .Info {
+    &-content {
+      flex:1 0 auto;
+    }
+
+    &--img {
+      flex-flow: column;
+    }
+  }
+}
+
