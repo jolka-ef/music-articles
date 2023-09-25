@@ -1,0 +1,17 @@
+.Details {
+  margin: 0;
+
+  &-title {
+    @extend %product-details;
+    color: $palette-grayish;
+    padding-bottom: .25em;
+    &:not(:first-child) {
+      padding-top: 1.25em;
+    }
+  }
+
+  &-specifics {
+    @extend %product-details;
+    margin: 0;
+  }
+}

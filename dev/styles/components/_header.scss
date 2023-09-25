@@ -1,0 +1,66 @@
+.Header {
+  background: $palette-woodsmoke;
+  display: flex;
+  padding: 1em 3%;
+  max-width: $page-content-width;
+
+  &-drawer {
+    bottom: 0;
+    left:0;
+    position: absolute;
+    right:0;
+    z-index: -1;
+  }
+
+  &-drawerToggle {
+    background: transparent;
+    border:0;
+    color: inherit;
+    font-size: 1.75em;
+    padding: 0;
+  }
+
+  &-link {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      box-shadow: $navigation-underline;
+    }
+  }
+
+  &-title {
+    flex: 1 0 0%;
+    font-size: 1.75em;
+    line-height: 1;
+  }
+}
+
+
+@include set-query(medium) {
+  .Header {
+    align-items: flex-end;
+    background: transparent;
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 94%;
+
+    &-drawer {
+      flex: 1 0 0%;
+      margin-left: 2rem;
+      overflow: visible;
+      position: static;
+      z-index: 0;
+    }
+
+    &-drawerToggle {
+      display: none;
+    }
+
+    &-title {
+      flex: 0 0 auto;
+      font-size: 2.75em;
+    }
+  }
+}

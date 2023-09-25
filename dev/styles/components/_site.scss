@@ -1,0 +1,54 @@
+.Site {
+  background: $palette-white url('./img/background.png') fixed center center/cover no-repeat;
+  display: flex;
+  flex-flow: column;
+
+  &-content {
+    margin: auto;
+    max-width: $page-content-width;
+    width: 94%;
+  }
+
+  &-contentContainer {
+    flex: 1 0 auto;
+    padding: 2.5rem 0;
+
+    &--opened {
+      margin-top: 8.75em;
+    }
+
+    &--opening {
+      margin-top: 8.75em;
+      transition: margin-top $transition-duration $cubic-bezier;
+    }
+
+    &--closing {
+      margin-top: 0;
+      transition: margin-top $transition-duration $cubic-bezier;
+    }
+
+  }
+
+  &-header {
+    flex: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  &-footer {
+    flex: none;
+    padding-bottom: $element-distance;
+  }
+}
+
+
+@include set-query(medium) {
+  .Site {
+    &-contentContainer--opened {
+      margin-top: 0;
+    }
+    &-header {
+      background: rgba(0, 0, 0, 0.34902);;
+    }
+  }
+}

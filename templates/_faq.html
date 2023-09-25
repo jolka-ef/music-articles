@@ -1,0 +1,21 @@
+<ul class="Help-list">
+  {% for i in range (0,3) %}
+  <li class="Help-item">
+    <section>
+      <h3 class="Help-topic">Topic</h3>
+      <dl class="Help-questions">
+        {% for j in range ([2,2,3,1] | random ) %}
+        <dt class="Help-question">Question?</dt>
+        <dd class="Help-answer">Answer respondo responsum svar odpovědět responder svar répondre risposta responsum
+          odpovědět responder svar answer respondo responsum 	odpovědět répondre risposta
+          odpovědět répondre risposta.
+        </dd>
+        {% endfor %}
+      </dl>
+    </section>
+  </li>
+  {% endfor %}
+</ul>
+
+
+

@@ -1,0 +1,14 @@
+.Input {
+  background: $palette-black;
+  border: 0;
+  border-radius: 4px;
+  color: $palette-white;
+  padding: 1em;
+  margin-top: .5em;
+}
+
+.InputLabel {
+  display: flex;
+  flex-flow: column;
+  text-transform: uppercase;
+}

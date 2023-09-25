@@ -1,0 +1,49 @@
+.Payments {
+  background: $palette-black;
+  display: flex;
+  flex-flow: column;
+
+  &-methods {
+    display: flex;
+    margin: $gutter 0 0;
+  }
+
+  &-method {
+    background: $palette-cyan;
+    flex: 1 0 0%;
+
+    & + .Payments-method {
+      margin-left: $gutter;
+    }
+  }
+
+  &-methodButton {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    padding: 1em .5em;
+    width: 100%;
+
+    &:hover, &:focus {
+      background: $palette-woodsmoke;
+    }
+  }
+
+  &-text {
+    display: block;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+  }
+}
+
+
+@include set-query(medium) {
+  .Payments {
+    &-methodButton {
+      padding: 4em 3em;
+    }
+  }
+}

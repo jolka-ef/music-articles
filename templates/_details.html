@@ -1,0 +1,8 @@
+<dl class="Details">
+  {% for detail in productItemDetails %}
+  <dt class="Details-title">{{detail.name}}</dt>
+  {% for specific in detail.specifics %}
+  <dd class="Details-specifics">{{specific}}</dd>
+  {% endfor %}
+  {% endfor %}
+</dl>

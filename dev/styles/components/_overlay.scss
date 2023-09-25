@@ -1,0 +1,76 @@
+.Overlay {
+  background: $palette-black;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  transform: translate3D(0, 100%, 0);
+  transition: transform .5s cubic-bezier(0.42, 0.0, 1.0, 1.0);
+  visibility: hidden;
+  width: 100%;
+
+  &--isHiding {
+    visibility: visible;
+  }
+
+  &--isSelected {
+    transform: translate3d(0,0,0);
+    visibility: visible;
+  }
+
+  &-box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+  }
+
+  &-button{
+    background:transparent;
+    border:0;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5em;
+    left: 0;
+    margin: .375em;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    transition: color .3s cubic-bezier(.4,0,.2,1);
+
+    &:hover,&:focus {
+      color: $palette-grayish;
+      outline:0
+    }
+  }
+
+  &-media {
+    height: 100%;
+    position: absolute;
+    width:100%;
+  }
+
+  &-mediaContainer {
+    height: 100%;
+    margin: auto;
+    padding: 20%;
+    width: 100%;
+  }
+
+  &-text {
+    margin: auto;
+    padding: 3em;
+    text-align: center;
+  }
+}
+
+
+@include set-query(medium) {
+  .Overlay {
+    &-mediaContainer--latest {
+      padding: 5em;
+    }
+  }
+}

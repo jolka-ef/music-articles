@@ -1,0 +1,36 @@
+{% set title = 'Newsletter' %}
+{% extends '_base.html' %}
+
+{% block content %}
+<div class="Newsletter">
+  <aside class="Info">
+    <div class="Info-content">
+      <p>To stay informed about upcoming tours, shows and other releases,
+        please enter your email address and zip or postal code (optional) below.
+      </p>
+    </div>
+  </aside>
+
+  <form class="Form">
+    <div class="Form-field">
+      <label class="InputLabel">
+        Email address *
+        <input class="Input" name="email" type="email" required="required" placeholder="email@domain.com"/>
+      </label>
+    </div>
+
+    <div class="Form-field">
+      <label class="InputLabel">
+        Zip / Postal Code
+        <input class="Input" type="text" placeholder="e.g. 20500, SW1A 1 AA, etc (optional)"/>
+      </label>
+    </div>
+
+    <div class="Form-field">
+      <button class="Button" type="submit">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}
